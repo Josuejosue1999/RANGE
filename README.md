@@ -1,13 +1,13 @@
 TECH STACK:
 
 Frontend:
-	a. HTML
-	b. CSS
-	c. JavaScript
+a. HTML
+b. CSS
+c. JavaScript
 
 Backend:
-	a. Flask Framework
-	b. SQL Database
+a. Flask Framework
+b. SQL Database
 
 SERVICES:
 
