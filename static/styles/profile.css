@@ -37,7 +37,7 @@ main a {
   padding: 40px;
   padding-top: 10px;
   padding-left: 1.6%;
-  border-right: 1px solid #333;
+  border-right: 2px solid #333;
   height: 100vh;
   padding-right: 0;
 }
@@ -102,7 +102,7 @@ main a {
 }
 
 .title {
-  border-bottom: 1px solid #333;
+  border-bottom: 2px solid #333;
   font-size: 9px;
   color: #595959;
 }
@@ -156,8 +156,18 @@ main a {
   width: 40%;
   margin: 0;
   padding: 5px;
+  padding-left: 35px;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+}
+
+.profile-title h2 {
+  font-size: 38px;
+  margin: 0;
+}
+
+.profile-title p {
+  margin: 0;
 }
 
 .profile-pic {
@@ -171,7 +181,7 @@ main a {
 .profile-main {
   width: 90%;
   height: 75%;
-  border: 1px solid #333;
+  border: 2px solid #333;
   border-radius: 20px;
   align-self: center;
   margin-top: 25px;
@@ -186,7 +196,7 @@ main a {
   flex-direction: column;
   width: 42%;
   height: 85%;
-  border: 1px solid #333;
+  border: 2px solid #333;
   border-radius: 20px;
 }
 
@@ -204,7 +214,7 @@ main a {
   margin: 0;
   width: 100%;
   height: 45%;
-  border: 1px solid #333;
+  border: 2px solid #333;
   border-radius: 20px;
 }
 
@@ -213,6 +223,6 @@ main a {
   margin: 0;
   width: 100%;
   height: 45%;
-  border: 1px solid #333;
+  border: 2px solid #333;
   border-radius: 20px;
 }
