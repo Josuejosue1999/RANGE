@@ -3,84 +3,127 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/styles/profile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Profile</title>
   </head>
   <body>
     <main>
-      <!-- Navigation bar -->
-      <section>
-        <div class="logo"></div>
-        <div class="menu">
-          <div class="menu-title">
-            <h3>Menu</h3>
-          </div>
-          <div class="dashboard">
-            <a href="">
-              <i class="dashboard-icon"></i>
-              <h4>Dashboard</h4>
-            </a>
-          </div>
-          <div class="tasks">
-            <a href="">
-              <i class="task-icon"></i>
-              <h4>My Tasks</h4>
-            </a>
-          </div>
-          <div class="collaborations">
-            <a href="">
-              <i class="collaborations-icon"></i>
-              <h4>Teams</h4>
-            </a>
-          </div>
-        </div>
-        <div class="preference">
-          <div class="myprofile">
-            <a href="">
-              <i class="profile-icon"></i>
-              <h4>My Profile</h4>
-            </a>
-          </div>
-          <div class="logout">
-            <a href="">
-              <i class="logout-icon"></i>
-              <h4>Logout</h4>
-            </a>
-          </div>
-        </div>
-        <div class="support">
+      <!-- NAVIGATION BAR -->
+      <section class="navbar">
+        <!-- logo top left -->
+        <div class="logo">
           <a href="">
-            <i class="help-icon"></i>
-            <h4>Help & Support</h4>
+            <i class="fa-solid fa-otter"></i>
+            <h3>RANGE</h3>
           </a>
         </div>
+        <!-- navbar content -->
+        <div class="nav-content">
+          <!-- menu -->
+          <div class="nav-sect">
+            <!-- titles -->
+            <div class="title">
+              <h2>Menu</h2>
+            </div>
+            <!-- options to click -->
+            <div class="nav-select">
+              <div class="select">
+                <a href="">
+                  <i class="fa-solid fa-chart-bar"></i>
+                  <h3>Dashboard</h3>
+                </a>
+              </div>
+              <div class="select">
+                <a href="">
+                  <i class="fa-solid fa-list-check"></i>
+                  <h3>Tasks</h3>
+                </a>
+              </div>
+              <div class="select">
+                <a href="">
+                  <i class="fa-solid fa-users"></i>
+                  <h3>Teams</h3>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- preferences -->
+          <div class="nav-sect">
+            <!-- titles -->
+            <div class="title">
+              <h2>Preference</h2>
+            </div>
+            <!-- options to click -->
+            <div class="nav-select">
+              <div class="select">
+                <a href="">
+                  <i class="fa-solid fa-user"></i>
+                  <h3>My Profile</h3>
+                </a>
+              </div>
+              <div class="select">
+                <a href="">
+                  <i class="fa-solid fa-right-from-bracket"></i>
+                  <h3>Logout</h3>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- support -->
+          <div class="nav-sect">
+            <!-- titles -->
+            <div class="title">
+              <h2>Support</h2>
+            </div>
+            <!-- options to click -->
+            <div class="nav-select">
+              <div class="select">
+                <a href="">
+                  <i class="fa-solid fa-circle-question"></i>
+                  <h3>Help & Support</h3>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-      <!-- Content -->
-      <section>
-        <div class="profle">
+      <!-- CONTENT -->
+      <section class="content">
+        <!-- PROFILE HEADER -->
+        <div class="profile-header">
           <div class="profile-title">
-            <h2>Edit Profile</h2>
+            <h2>My Profile</h2>
+            <p>See and update you personal information</p>
           </div>
-          <div class="profile-body">
-            <div class="profile-left">
-              <div class="profile-pic"></div>
-              <div class="username"></div>
-              <div class="progress-bar"></div>
-            </div>
-            <div class="profile-right">
-              <div class="profile-form">
-                <div class="profile-heading">
-                  <h4>My Personal Info</h4>
-                </div>
-              </div>
-              <div class="teams">
-                <div class="profile-heading">
-                  <h4>My Teams</h4>
-                </div>
-              </div>
-            </div>
+          <div class="profile-pic">
+            <i class="fa-solid fa-bell"></i>
+            <img src="" alt="profile picture" />
+            <!-- Dropdown menu -->
+            <h4>Hello Person</h4>
           </div>
-          <div class="profile pic"></div>
-          <div></div>
+        </div>
+        <!-- PROFILE MAIN -->
+        <div class="profile-main">
+          <!-- user left -->
+          <div class="user-left">
+            <div class="user-image">
+              <img src="" alt="profile picture">
+            </div>
+            <form action=""></form>
+            <!-- progress bar -->
+          </div>
+          <!-- user right -->
+          <div class="user-right">
+            <div class="information"></div>
+            <div class="user-teams"></div>
+          </div>
         </div>
       </section>
     </main>
