@@ -1,0 +1,177 @@
+* {
+  /* margin: 0;
+  padding: 0;
+  box-sizing: border-box; */
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #ececec;
+  background: #1f1f1f;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+/* DASHBOARD CONTENT */
+.dashboard {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dashboard header */
+.dash-header {
+  width: 95%;
+  height: 12%;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.title-search {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 55%;
+  margin: 0;
+  padding-left: 35px;
+}
+
+.dash-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  padding-left: 0;
+}
+
+.dash-title h2 {
+  font-size: 38px;
+  margin: 0;
+}
+
+.dash-title p {
+  margin: 0;
+}
+
+.notifications {
+  margin: 0;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.notifications i {
+  font-size: 20px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* SEARCH BAR */
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  width: 42%;
+  align-items: center;
+  justify-content: space-around;
+  height: 45%;
+  border: 2px solid #805fd6;
+  border-radius: 20px;
+}
+
+/* DASHBOARD BODY */
+.dash-body {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  height: 85%;
+  border: 2px solid #333;
+  border-radius: 20px;
+  justify-self: center;
+  align-self: center;
+  padding-top: 10px;
+  justify-content: space-evenly;
+}
+
+/* top row */
+.dash-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 40%;
+  padding: 0;
+}
+
+.dash-tasks,
+.dash-collaborations,
+.dash-deadlines {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 32%;
+  height: 100%;
+  /* background: green; */
+}
+
+.dash-body h2 {
+  font-size: 17px;
+  color: #595959;
+  margin: 0;
+  align-self: flex-start;
+  margin-left: 23px;
+}
+
+.progress {
+  width: 95%;
+  height: 90%;
+  border: 2px solid #333;
+  border-radius: 20px;
+}
+
+/* DASHBOARD BODY BOTTOM ROW */
+.dash-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 55%;
+  padding: 0;
+  align-self: center;
+}
+
+.current-task, .current-project {
+  width: 48%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.current-progress {
+  width: 98%;
+  height: 90%;
+  border: 2px solid #333;
+  border-radius: 20px;
+}

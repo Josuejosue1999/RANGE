@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../static/styles/profile.css" />
+    <link rel="stylesheet" href="../static/styles/dashboard.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -11,7 +12,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Profile</title>
+    <title>Dashboard</title>
   </head>
   <body>
     <main>
@@ -94,35 +95,62 @@
           </div>
         </div>
       </section>
-      <!-- CONTENT -->
-      <section class="content">
-        <!-- PROFILE HEADER -->
-        <div class="profile-header">
-          <div class="profile-title">
-            <h2>My Profile</h2>
-            <p>See and update you personal information</p>
+      <!-- DASHBOARD SECTION -->
+      <section class="dashboard">
+        <!-- dashboard header -->
+        <div class="dash-header">
+          <div class="title-search">
+            <div class="dash-title">
+              <h2>My Dashboard</h2>
+              <p>Welcome! See latest updates</p>
+            </div>
+            <div class="search-bar">
+              <h3>search</h3>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
           </div>
-          <div class="profile-pic">
+
+          <div class="notifications">
+            <i class="fa-solid fa-comments"></i>
             <i class="fa-solid fa-bell"></i>
-            <img src="" alt="profile picture" />
-            <!-- Dropdown menu -->
-            <h4>Hello Person</h4>
+            <div class="profile">
+              <img src="" alt="profile picture" />
+              <h4>Hello person</h4>
+            </div>
           </div>
         </div>
-        <!-- PROFILE MAIN -->
-        <div class="profile-main">
-          <!-- user left -->
-          <div class="user-left">
-            <div class="user-image">
-              <img src="" alt="profile picture">
+        <!-- dashboard body -->
+        <div class="dash-body">
+          <!-- dashboard top row -->
+          <div class="dash-top">
+            <!-- tasks progress -->
+            <div class="dash-tasks">
+              <h2>Tasks</h2>
+              <div class="progress"></div>
             </div>
-            <form action=""></form>
-            <!-- progress bar -->
+            <!-- team projects progress -->
+            <div class="dash-collaborations">
+              <h2>Projects</h2>
+              <div class="progress"></div>
+            </div>
+            <!-- deadlines -->
+            <div class="dash-deadlines">
+              <h2>Deadlines</h2>
+              <div class="progress"></div>
+            </div>
           </div>
-          <!-- user right -->
-          <div class="user-right">
-            <div class="information"></div>
-            <div class="user-teams"></div>
+          <!-- dashboard bottom row -->
+          <div class="dash-bottom">
+            <!-- current task -->
+            <div class="current-task">
+              <h2>Current Task</h2>
+              <div class="current-progress"></div>
+            </div>
+            <!-- current project -->
+            <div class="current-project">
+              <h2>Current Task</h2>
+              <div class="current-progress"></div>
+            </div>
           </div>
         </div>
       </section>
