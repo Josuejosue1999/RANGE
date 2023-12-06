@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../static/styles/profile.css" />
+    <link rel="stylesheet" href="../static/styles/dashboard.css" />
+    <link rel="stylesheet" href="../static/styles/tasks.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -11,7 +13,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Profile</title>
+    <title>Tasks</title>
   </head>
   <body>
     <main>
@@ -94,35 +96,85 @@
           </div>
         </div>
       </section>
-      <!-- CONTENT -->
-      <section class="content">
-        <!-- PROFILE HEADER -->
-        <div class="profile-header">
-          <div class="profile-title">
-            <h2>My Profile</h2>
-            <p>See and update you personal information</p>
+      <!-- TASKS SECTION -->
+      <section class="tasks">
+        <!-- tasks header -->
+        <div class="tasks-header">
+          <div class="title-search">
+            <div class="tasks-title">
+              <h2>My Tasks</h2>
+              <p>Create and manage your tasks</p>
+            </div>
+            <div class="search-bar">
+              <h3>Find a Task</h3>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
           </div>
-          <div class="profile-pic">
+
+          <div class="notifications">
+            <i class="fa-solid fa-comments"></i>
             <i class="fa-solid fa-bell"></i>
-            <img src="" alt="profile picture" />
-            <!-- Dropdown menu -->
-            <h4>Hello Person</h4>
+            <div class="profile">
+              <img src="" alt="profile picture" />
+              <h4>Hello person</h4>
+            </div>
           </div>
         </div>
-        <!-- PROFILE MAIN -->
-        <div class="profile-main">
-          <!-- user left -->
-          <div class="user-left">
-            <div class="user-image">
-              <img src="" alt="profile picture">
+        <!-- TASKS BODY -->
+        <div class="tasks-body">
+          <!-- Top row -->
+          <div class="tasks-top">
+            <!-- pending -->
+            <div class="pending"></div>
+            <!-- calendar -->
+            <div class="calendar"></div>
+            <!-- priority & overdue -->
+            <div class="priority-overdue">
+              <div class="overdue"></div>
+              <div class="priority"></div>
             </div>
-            <form action=""></form>
-            <!-- progress bar -->
           </div>
-          <!-- user right -->
-          <div class="user-right">
-            <div class="information"></div>
-            <div class="user-teams"></div>
+          <!-- Bottom row -->
+          <div class="tasks-bottom">
+            <!-- Create task button -->
+            <div class="create-task"></div>
+            <!-- tasks list -->
+            <div class="tasks-list">
+              <!-- tasks columns -->
+              <div class="one-task">
+                <!-- title & update button -->
+                <div class="title-update">
+                  <div class="task-title"></div>
+                  <div class="task-update"></div>
+                </div>
+                <!-- progress bar -->
+                <div class="progress-bar"></div>
+                <!-- desc, due & completed -->
+                <div class="desc-due-comp"></div>
+              </div>
+              <div class="one-task">
+                <!-- title & update button -->
+                <div class="title-update">
+                  <div class="task-title"></div>
+                  <div class="task-update"></div>
+                </div>
+                <!-- progress bar -->
+                <div class="progress-bar"></div>
+                <!-- desc, due & completed -->
+                <div class="desc-due-comp"></div>
+              </div>
+              <div class="one-task">
+                <!-- title & update button -->
+                <div class="title-update">
+                  <div class="task-title"></div>
+                  <div class="task-update"></div>
+                </div>
+                <!-- progress bar -->
+                <div class="progress-bar"></div>
+                <!-- desc, due & completed -->
+                <div class="desc-due-comp"></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
