@@ -16,8 +16,7 @@ SERVICES:
 
 PAGES:
 
-- Login page
-- Sign Up page
+- Login/sign up page
 - Home page (index) Dashboard
 - Profile
 - Personal tasks page
