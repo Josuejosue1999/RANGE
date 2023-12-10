@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/log.css') }}">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Login</title>
+  </head>
+  <body>
+    <main>
+      <div class="logo">
+        <i class="fa-solid fa-otter"></i>
+            <h3>RANGE</h3>
+      </div>
+      <div class="log-content">
+        <form method="POST" action="">
+      {{ form.hidden_tag() }}
+      <fieldset>
+        <legend>Login</legend>
+        <div> {{ form.email(class="fill") }}</div>
+        <div>{{ form.password(class="fill") }}</div>
+        <div>{{ form.remember.label }} {{ form.remember }}</div>
+      </fieldset>
+      <div class="login-button">{{ form.submit(class="submit") }}</div>
+    </form>
+    <div class="sign-up">
+        <h1>Hello, Friend!</h1>
+            <p>
+              Register with your personal details to use all of site features
+            </p>
+            <a href=""><button class="hidden" id="register">SIGN UP</button></a>
+      </div>
+      </div>
+    </main>
+  </body>
+</html>

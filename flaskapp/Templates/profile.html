@@ -1,0 +1,64 @@
+{% extends "layout.html" %} {% block title %}
+<title>Profile</title>
+{% endblock title %} {% block mainheader %}
+<!-- CONTENT -->
+<section class="content">
+  <!-- PROFILE HEADER -->
+  <div class="profile-header">
+    <div class="profile-title">
+      <h2>My Profile</h2>
+      <p>See and update you personal information</p>
+    </div>
+    <div class="profile-pic">
+      <i class="fa-solid fa-bell"></i>
+      <img src="" alt="profile picture" />
+      <!-- Dropdown menu -->
+      <h4>Hello Person</h4>
+    </div>
+  </div>
+  <!-- PROFILE MAIN -->
+  <div class="profile-main">
+    <!-- user left -->
+    <div class="user-left">
+      <div class="user-image">
+        <img src="{{ image_file }}" alt="profile picture" />
+      </div>
+      <!-- USERNAME -->
+      <div class="username-email">
+        <h3>Username: {{ current_user.username }}</h3>
+        <h3>Email: {{ current_user.email }}</h3>
+      </div>
+      <!-- progress bar -->
+      <div class="prog">
+        <h4>PROGRESS: &nbsp; 40%</h4>
+        <div class="prog-bar">
+          <div class="prog-br"></div>
+        </div>
+      </div>
+    </div>
+    <!-- user right -->
+    <div class="user-right">
+      <div class="information">
+        <form method="POST" action="" enctype="multipart/form-data">
+          {{ form.hidden_tag() }}
+          <fieldset>
+            <legend>Account Info</legend>
+            <div>{{ form.username(class="change") }}</div>
+            <div>{{ form.email(class="change") }}</div>
+            <div class="upload-pic">
+              {{ form.picture.label() }} {{ form.picture(class="picture") }}
+              {% if form.picture.errors %}
+                {% for error in form.picture.errors %}
+                  <span class="danger"> {{ error }} </span><br>
+                {% endfor %}
+              {% endif %}
+            </div>
+          </fieldset>
+          <div class="update-button">{{ form.submit(class="submit") }}</div>
+        </form>
+      </div>
+      <div class="user-teams"></div>
+    </div>
+  </div>
+</section>
+{% endblock mainheader %}

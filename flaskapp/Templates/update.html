@@ -1,0 +1,19 @@
+{% extends "layout.html" %} {% block title %}
+<title>Tasks</title>
+<form method="post" action="/">
+        {{ form.hidden_tag() }}
+        <fieldset>
+            <legend>Update Task</legend>
+            <div>{{ form.title(class="change") }}</div>
+            <div>{{ form.priority(class="change") }}</div>
+            <div>{{ form.content(class="change") }}</div>
+            <div>{{ form.date_due(class="change") }}
+              {% if form.date_due.errors %}
+                {% for error in form.date_due.errors %}
+                  <span class="danger"> {{ error }} </span><br>
+                {% endfor %}
+              {% endif %}
+            </div>
+          </fieldset>
+          <div class="update-button">{{ form.submit(class="submit") }}</div>
+      </form>

@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% block title %}
+<title>Dashboard</title>
+{% endblock title %}
+{% block mainheader %}
+<!-- DASHBOARD SECTION -->
+<section class="dashboard">
+  <!-- dashboard header -->
+  <div class="dash-header">
+    <div class="title-search">
+      <div class="dash-title">
+        <h2>My Dashboard</h2>
+        <p>Welcome! See latest updates</p>
+      </div>
+      <div class="search-bar">
+        <h3>search</h3>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+
+    <div class="notifications">
+      <i class="fa-solid fa-comments"></i>
+      <i class="fa-solid fa-bell"></i>
+      <div class="profile">
+        <img src="" alt="profile picture" />
+        <h4>Hello person</h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- dashboard body -->
+  <div class="dash-body">
+    <!-- dashboard top row -->
+    <div class="dash-top">
+      <!-- tasks progress -->
+      <div class="dash-tasks">
+        <h2>Tasks</h2>
+        <div class="progress"></div>
+      </div>
+      <!-- team projects progress -->
+      <div class="dash-collaborations">
+        <h2>Projects</h2>
+        <div class="progress"></div>
+      </div>
+      <!-- deadlines -->
+      <div class="dash-deadlines">
+        <h2>Deadlines</h2>
+        <div class="progress"></div>
+      </div>
+    </div>
+    <!-- dashboard bottom row -->
+    <div class="dash-bottom">
+      <!-- current task -->
+      <div class="current-task">
+        <h2>Current Task</h2>
+        <div class="current-progress"></div>
+      </div>
+      <!-- current project -->
+      <div class="current-project">
+        <h2>Current Project</h2>
+        <div class="current-progress"></div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock mainheader %}

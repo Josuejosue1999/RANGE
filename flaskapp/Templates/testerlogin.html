@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Flask Form</title>
+    <link rel="stylesheet" href="../static/styles/style_login.css" />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="form-container sign-up">
+        <!-- REGISTER -->
+        <form method="POST" action="">
+          {{ form.hidden_tag() }}
+          <h1>Create Account</h1>
+          <input
+            type="text"
+            placeholder="Username"
+            name="{{ form.username.name }}"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            name="{{ form.email.name }}"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            name="{{ form.password.name }}"
+          />
+          <input
+            type="password"
+            placeholder="Confirm Password"
+            name="{{ form.confirm_password.name }}"
+          />
+          <button name="{{ form.submit.name }}">Sign Up</button>
+        </form>
+      </div>
+      <div class="form-container sign-in">
+        <!-- LOGIN IN  -->
+        <form method="POST" action="">
+          {{ form.hidden_tag() }}
+          <h1>Login</h1>
+          <div>
+            <input
+              type="email"
+              id="email_signin"
+              placeholder="Email"
+              name="{{ form.email.name }}"
+            />
+          </div>
+          <div>
+            <input
+              type="password"
+              id="password_signin"
+              placeholder="Password"
+              name="{{ form.password.name }}"
+            />
+          </div>
+          <a href="#">Forgot Your Password?</a>
+          <button>Login</button>
+        </form>
+      </div>
+      <div class="toggle-container">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left">
+            <h1>Welcome Back!</h1>
+            <p>Enter your personal details to use all of site features</p>
+            <button class="hidden" id="login">Sign In</button>
+          </div>
+          <div class="toggle-panel toggle-right">
+            <h1>Hello, Friend!</h1>
+            <p>
+              Register with your personal details to use all of site features
+            </p>
+            <button class="hidden" id="register">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script_login.js') }}"></script>
+  </body>
+</html>
