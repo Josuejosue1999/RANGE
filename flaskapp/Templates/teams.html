@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./collab.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Teams</title>
+  </head>
+  <body>
+    <main>
+      <!-- NAVIGATION BAR -->
+      <section class="navbar">
+        <!-- logo top left -->
+        <div class="logo">
+          <a href="./dashboard.html">
+            <i class="fa-solid fa-otter"></i>
+            <h3>RANGE</h3>
+          </a>
+        </div>
+        <!-- navbar content -->
+        <div class="nav-content">
+          <!-- menu -->
+          <div class="nav-sect">
+            <!-- titles -->
+            <div class="title">
+              <h2>Menu</h2>
+            </div>
+            <!-- options to click -->
+            <div class="nav-select">
+              <div class="select">
+                <a href="./dashboard.html">
+                  <i class="fa-solid fa-chart-bar"></i>
+                  <h3>Dashboard</h3>
+                </a>
+              </div>
+              <div class="select">
+                <a href="./tasks.html">
+                  <i class="fa-solid fa-list-check"></i>
+                  <h3>Tasks</h3>
+                </a>
+              </div>
+              <div class="select">
+                <a href="./teams.html">
+                  <i class="fa-solid fa-users"></i>
+                  <h3>Teams</h3>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- preferences -->
+          <div class="nav-sect">
+            <!-- titles -->
+            <div class="title">
+              <h2>Preference</h2>
+            </div>
+            <!-- options to click -->
+            <div class="nav-select">
+              <div class="select">
+                <a href="./profile.html">
+                  <i class="fa-solid fa-user"></i>
+                  <h3>My Profile</h3>
+                </a>
+              </div>
+              <div class="select">
+                <a href="./login.html">
+                  <i class="fa-solid fa-right-from-bracket"></i>
+                  <h3>Logout</h3>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- support -->
+          <div class="nav-sect">
+            <!-- titles -->
+            <div class="title">
+              <h2>Support</h2>
+            </div>
+            <!-- options to click -->
+            <div class="nav-select">
+              <div class="select">
+                <a href="">
+                  <i class="fa-solid fa-circle-question"></i>
+                  <h3>Help & Support</h3>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- TEAMS SECTION -->
+      <section class="teams">
+        <!-- Teams header -->
+        <div class="teams-header">
+          <div class="title-search">
+            <div class="teams-title">
+              <h2>Teams Workspace</h2>
+            </div>
+            <div class="search-bar">
+              <h3>search</h3>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+
+          <div class="notifications">
+            <i class="fa-solid fa-comments"></i>
+            <i class="fa-solid fa-bell"></i>
+            <div class="profile">
+              <img src="img-holder2.jpg" alt="profile picture" />
+              <h4>Hello person</h4>
+            </div>
+          </div>
+        </div>
+        <!-- Teams body -->
+        <div class="teams-body">
+          <!-- Teams top row -->
+          <div class="teams-top">
+            <!-- tasks progress -->
+            <div class="about">
+              <h2>About</h2>
+              <div class="progress">
+                <div class="team-description" onclick="editTeamDescription()" contenteditable="true" data-placeholder="Add team description..."></div>
+              </div>
+            </div>
+            <!-- team projects progress -->
+            <div class="team-members">
+              <h2>Members(<span id="member-count">0</span>)</h2>
+              <div class="progress">
+                <div class="add-member-container">
+                  <button class="add-member-button" onclick="showAddMemberForm()">
+                    <i class="fas fa-user-plus"></i> Add Member
+                  </button>
+                  <div class="add-member-form" style="display: none;">
+                    <input type="email" id="email-input" placeholder="Enter email address">
+                    <button onclick="addMember()">Add</button>
+                  </div>
+                  <div class="manage-members-text">
+                    <div id="member-list"></div>
+                  </div>
+                  <div class="manage-member-text">
+                    <i class="fas fa-cogs"></i> Manage Members
+                  </div>                
+                                  
+                </div>
+              </div>
+            </div>
+            
+            <!-- deadlines -->
+            <div class="project-goals">
+              <h2>Project Goals</h2>
+              <div class="progress">
+                <div class="goals-container">
+                  <div id="goals-list">
+                    <p class="no-goals-message">You haven't created any goals yet.<br>Add a goal so the team can know what you hope to achieve.</p>
+                  </div>
+                
+                  <div id="create-goal-form" class="create-goal-form" style="display: none;">
+                    <div class="close-button" onclick="closeCreateGoalForm()">&times;</div>
+                    <form onsubmit="addGoal(); return false;">
+                      <div class="form-group">
+                        <label for="project-name-input">Project Name:</label>
+                        <input type="text" id="project-name-input" placeholder="Enter project name" required />
+                      </div>
+                
+                      <div class="form-group">
+                        <label for="priority-select">Priority:</label>
+                        <select id="priority-select" required>
+                          <option value="" disabled selected>Select priority</option>
+                          <option value="high">High</option>
+                          <option value="medium">Medium</option>
+                          <option value="low">Low</option>
+                        </select>
+                      </div>
+                
+                      <div class="form-group">
+                        <label for="privacy-select">Privacy:</label>
+                        <select id="privacy-select" required>
+                          <option value="" disabled selected>Select privacy</option>
+                          <option value="public">Public</option>
+                          <option value="private">Private</option>
+                        </select>
+                      </div>
+                
+                      <div class="form-group">
+                        <label for="deadline-input">Deadline:</label>
+                        <input type="date" id="deadline-input" required />
+                      </div>
+                
+                      <button type="submit">Add</button>
+                    </form>
+                  </div>
+                
+                  <div id="project-details" style="display: none;">
+                    <h3 id="project-name" class="placeholder"></h3>
+                    <p id="project-priority" class="placeholder">Priority</p>
+                    <p id="project-privacy" class="placeholder">Privacy</p>
+                    <p id="project-deadline" class="placeholder">Deadline</p>
+                    <div id="goal-progress-bar">
+                      <div id="goal-progress-fill"></div>
+                    </div>
+                    <p id="goal-progress-text"></p>
+                  </div>
+                  <button id="create-goal-button" onclick="showCreateGoalForm()">
+                    <span class="button-text">Create Goal</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Teams bottom row -->
+
