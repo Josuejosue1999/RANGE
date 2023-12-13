@@ -113,11 +113,11 @@ main {
 }
 
 /* LOGIN FORM */
-form {
+.reggae {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     color: #333;
 }
 
@@ -127,13 +127,12 @@ fieldset {
     align-items: center;
     justify-content: center;
     width: 80%;
-    height: 60%;
+    height: 80%;
     border: 0;
 }
 
-legend {
-    width: 50%;
-    height: 15%;
+.dunna {
+    width: 100%;
     text-align: center;
     font-size: 30px;
     font-weight: 700;
@@ -141,7 +140,7 @@ legend {
 
 .fill {
     background: #d0c0f7;
-    margin: 10px;
+    margin: 8px;
     height: 30px;
     width: 100%;
     border: 0;

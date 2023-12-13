@@ -162,7 +162,7 @@ main a {
 }
 
 .profile-title h2 {
-  font-size: 38px;
+  font-size: 35px;
   margin: 0;
 }
 
@@ -176,6 +176,13 @@ main a {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+.profile-pic img {
+  width: 15%;
+  height: 57%;
+  border-radius: 50%;
+  border: 1px solid #805fd6;
 }
 
 .profile-pic i {
@@ -230,23 +237,33 @@ main a {
 }
 
 .information form {
-  width: 90%;
+  width: 100%;
   height: 100%;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
 }
 
 fieldset {
-  width: 80%;
-  height: 55%;
+  width: 90%;
+  height: 86%;
   border: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.space{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20%;
 }
 
 .upload-pic {
@@ -254,8 +271,8 @@ fieldset {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 48%;
-  margin: 2px;
+  width: 60%;
+  margin: 0;
 }
 
 .picture {
@@ -263,20 +280,22 @@ fieldset {
 }
 
 
-legend {
-  width: 60%;
-  height: 30%;
+.dunnie {
+  width: 90%;
+  height: 15%;
   color: #ececec;
   font-size: 20px;
   font-weight: 600;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .change {
   background: #d0c0f7;
-  margin: 10px;
-  height: 20px;
-  width: 90%;
+  margin: 0;
+  height: 50%;
+  width: 100%;
   border: 0;
   border-radius: 8px;
   padding: 7px;
@@ -285,7 +304,7 @@ legend {
 
 .update-button {
   width: 45%;
-  height: 15%;
+  height: 14%;
   margin: 10px;
   display: flex;
   align-items: center;
@@ -293,10 +312,10 @@ legend {
 }
 
 .submit {
-  font-size: 17px;
-  font-weight: 600;
-  width: 60%;
-  height: 80%;
+  font-size: 15px;
+  font-weight: 500;
+  width: 50%;
+  height: 90%;
   cursor: pointer;
   border: 0;
   border-radius: 7px;
@@ -323,8 +342,8 @@ legend {
 }
 
 .user-image img {
-  width: 300px;
-  height: 300px;
+  width: 65%;
+  height: 80%;
   border-radius: 50%;
 }
 

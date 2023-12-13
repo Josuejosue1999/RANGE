@@ -2,6 +2,7 @@ from flaskapp import db, login_manager
 from datetime import datetime
 from flask_login import UserMixin
 
+
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
@@ -26,18 +27,9 @@ class Task(db.Model):
     date_created = db.Column(
         db.DateTime, nullable=False, default=datetime.utcnow)
     priority = db.Column(db.String(30), nullable=False, default='Mid')
+    todo = db.Column(db.Text, nullable=False)
+    date_due = db.Column(db.String(20), nullable=False, default='No due date')
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
-    todos = db.relationship('Todo', backref='task', lazy=True)
 
     def __repr__(self) -> str:
         return f"Task('{self.title}', '{self.date_created}')"
-
-
-class Todo(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    todo = db.Column(db.Text, nullable=False)
-    date_due = db.Column(db.String(20), nullable=False, default='No due date')
-    task_id = db.Column(db.Integer, db.ForeignKey('task.id'), nullable=False)
-
-    def __repr__(self) -> str:
-        return f"Todo('{self.id}', '{self.date_due}')"

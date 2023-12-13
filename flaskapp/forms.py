@@ -73,3 +73,14 @@ class TaskForm(FlaskForm):
     priority = SelectField('Priority', choices=dropdown,
                            render_kw={"placeholder": "Priority"})
     submit = SubmitField('Save')
+
+
+class UpdateTaskForm(FlaskForm):
+    title = StringField('Title', validators=[DataRequired()], render_kw={
+                        "placeholder": "Title"})
+    content = TextAreaField('Content', render_kw={"placeholder": "Add Todo"})
+    date_due = DateField('Due Date', validators=[DataRequired()])
+    dropdown = [('high', 'High'), ('mid', 'Mid'), ('low', 'Low')]
+    priority = SelectField('Priority', choices=dropdown,
+                           render_kw={"placeholder": "Priority"})
+    submit = SubmitField('Update')

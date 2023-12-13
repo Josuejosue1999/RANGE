@@ -23,12 +23,12 @@
         <div class="log-in">
         <h1>Welcome Back!</h1>
             <p>Enter your personal details to use all of site features</p>
-            <a href=""><button class="hidden" id="register">LOGIN</button></a>
+            <a href="{{ url_for('login') }}"><button class="hidden" id="register">LOGIN</button></a>
       </div>
-        <form method="POST" action="">
-      {{ form.hidden_tag() }}
+        <form method="POST" action="" class="reggae">
+        {{ form.hidden_tag() }}
       <fieldset>
-        <legend>Sign Up</legend>
+        <legend class="dunna">Sign Up</legend>
         <div> {{ form.username(class="fill") }}</div>
         <div> {{ form.email(class="fill") }}</div>
         <div>{{ form.password(class="fill") }}</div>
