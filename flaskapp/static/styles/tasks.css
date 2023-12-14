@@ -90,12 +90,37 @@ main {
   border-radius: 20px; */
 }
 
-.pending,
-.calendar {
+.pending {
   width: 35%;
   height: 100%;
-  border: 2px solid #333;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pending h2 {
+  font-size: 17px;
+  color: #acabab;
+  align-self: center;
+  justify-self: center;
+  align-self: flex-start;
+  height: 13%;
+  margin: 0;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.pendragon {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 85%;
+  border-radius: 20px;
+  background: #815fd657;
+  margin: 0;
 }
 
 .priority-overdue {
@@ -112,8 +137,22 @@ main {
 .overdue {
   width: 100%;
   height: 48%;
-  border: 2px solid #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.late{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 80%;
   border-radius: 20px;
+  background: #815fd657;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
 }
 
 .priority{
@@ -125,8 +164,8 @@ main {
   align-items: center;
 }
 
-.priority h2 {
-  font-size: 20px;
+.priority h2, .overdue h2 {
+  font-size: 18px;
   height: 15%;
   margin: 0;
   padding-left: 15px;
@@ -138,7 +177,7 @@ main {
   width: 100%;
   height: 80%;
   border-radius: 20px;
-  background: #2a2a2a;
+  background: #815fd657;
 }
 
 .code {
@@ -203,7 +242,6 @@ main {
   overflow-x: auto;
   padding: 10px;
   padding-top: 0;
-  white-space: nowrap;
 }
 
 /* INDIVIDUAL TASKS */
@@ -287,6 +325,21 @@ main {
   font-weight: 500;
 }
 
+
+/* UPDATE BUTTON */
+.title-update a button {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(223, 77, 252, 0.418);
+  border: 1px solid #333;
+  color: #d3d3d4;
+  cursor: pointer;
+}
+
 .task-update {
   display: flex;
   flex-direction: row;
@@ -296,9 +349,27 @@ main {
   height: 80%;
 }
 
+.title-update a {
+  width: 20%;
+  height: 80%;
+}
+
+.delete {
+  width: 20%;
+  height: 80%;
+  border: 0;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #fa6dcbbe;
+  border: 1px solid #333;
+  color: #d3d3d4;
+  cursor: pointer;
+}
+
 .progress-bar {
   width: 95%;
-  height: 3%;
+  height: 1%;
   border: 2px solid #333;
   border-radius: 20px;
   display: none;
@@ -311,22 +382,6 @@ main {
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-
-/* UPDATE BUTTON */
-.task-update button {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 600;
-  background: rgba(66, 48, 87, 0.2);
-  border: 1px solid #333;
-  color: #d3d3d4;
-  cursor: pointer;
 }
 
 
@@ -339,7 +394,7 @@ main {
   border: 0;
   border-radius: 20px;
   color: #ececec;
-  background: #2a2a2a;
+  background: #815fd663;
   border: 2px solid #333;
   cursor: pointer;
 }
@@ -355,6 +410,7 @@ main {
   background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 
 .form-container {
@@ -365,11 +421,11 @@ main {
   width: 35%; /* Adjust the width as needed */
   height: 40%;
   position: relative; /* Ensure the close button is positioned relative to this container */
-  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
 
 .close-btn {
@@ -567,6 +623,8 @@ legend {
   width: 95%;
   height: 15%;
   border-bottom: 1px solid #333;
+  align-self: center;
+  justify-self: center;
 }
 
 .table-head h2 {
@@ -582,37 +640,95 @@ legend {
   align-items: center;
   justify-content: space-around;
   width: 95%;
-  height: 20%;
+  height: 80%;
+  align-self: center;
+  justify-self: center;
   /* border: 1px solid #805fd6;
   border-radius: 20px; */
-  margin-top: 8px;
 }
 
 .todd {
   margin: 0;
   font-size: 12px;
   font-weight: 400;
-  width: 60%;
-  min-height: 60%;
+  width: 65%;
+  height: 90%;
   border-radius: 20px;
   background: #332a4b;
-  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.todd p {
+  height: 100%;
+  width: 90%;
+  margin: 0;
+  font-size: 18px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
 .dodd {
   margin: 0;
   padding: 0;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 400;
   text-align: center;
   width: 30%;
-  height: 70%;
+  height: 90%;
   border-radius: 20px;
   background: #332a4b;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+
+/* Styles for overlay */
+    .overlay-1 {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+    }
+
+    /* Styles for modal */
+    .modal {
+      background: #333;
+      padding: 20px;
+      border-radius: 20px;
+      width: 25%;
+      height: 25%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      color: #ececec;
+    }
+
+    /* Close button style */
+    .clos-btn, .del-btn {
+      cursor: pointer;
+      padding: 5px 10px;
+      background: #805fd6;
+      border: none;
+      border-radius: 3px;
+      color: #ececec;
+    }
+
+    .close-del {
+      width: 50%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      color: #ececec;
+    }

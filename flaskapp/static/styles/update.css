@@ -1,7 +1,19 @@
 .updateTask {
   width: 100%;
-  margin: 0;
+  height: 85vh;
   padding: 0;
   display: flex;
   flex-direction: column;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
 }
+
+.update-form {
+    background: rgb(53, 36, 66);
+    width: 70%;
+    height: 80%;
+    padding: 10px;
+}
+

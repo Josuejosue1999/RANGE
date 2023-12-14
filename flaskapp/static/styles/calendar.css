@@ -1,0 +1,145 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.calendar-1 {
+  width: 35%;
+  height: 100%;
+  border: 2px solid #333;
+  border-radius: 20px;
+  background: #ccb8ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.calendar-1 header{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 20%;
+  color: #333;
+}
+
+header .icons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 25%;
+}
+
+header .icons span{
+  height: 40px;
+  width: 40px;
+  margin: 0 3px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 25px;
+  font-size: 27px;
+  user-select: none;
+  border-radius: 50%;
+  color: #333;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+
+}
+
+.icons span:last-child{
+  margin-right: -8px;
+}
+
+header .icons span:hover{
+  background: #f2f2f2;
+}
+
+header .current-date{
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    width: 98%;
+    height: 78%;
+    position: relative;
+}
+
+.days {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+.calendar .days{
+  margin-bottom: 8px;
+  margin-right: 28px;
+  margin-top: 0;
+  width: 90%;
+  height: 80%;
+  position: relative;
+  right: 5px;
+}
+.calendar li{
+  color: #333;
+  width: calc(100% / 7);
+  font-size: 18px;
+}
+.calendar .weeks li{
+  font-weight: 500;
+  cursor: default;
+}
+.calendar .days li{
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+}
+.days li.inactive{
+  color: #aaa;
+}
+.days li.active{
+  color: #fff;
+}
+.days li::before{
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 33px;
+  width: 33px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.days li.active::before{
+  background: #9B59B6;
+}
+.days li:not(.active):hover::before{
+  background: #f2f2f2;
+}
+
+.weeks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    list-style: none;
+  text-align: center;
+  position: relative;
+  right: 18px;
+
+}
+
+.weeks li {
+    width: calc(100% / 7);
+}
