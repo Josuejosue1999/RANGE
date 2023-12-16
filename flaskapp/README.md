@@ -1,24 +1,47 @@
-TECH STACK:
+Task and Project Management Web Application
+Overview
+This Flask-based web application provides a comprehensive task and project management solution designed for both individual users and collaborative teams, specifically tailored for college students. The application features a user-friendly interface with distinct pages for managing personal tasks, collaborating within teams, and monitoring important deadlines through a centralized dashboard. Additionally, the system sends timely email reminders to users as their deadlines approach.
 
-Frontend:
-a. HTML
-b. CSS
-c. JavaScript
+Features
+1. Task Page:
+    Add, edit, and delete personal tasks.
+    Categorize tasks for better organization.
+    Set due dates and priority levels.
 
-Backend:
-a. Flask Framework
-b. SQL Database
+2. Team Page:
+    Collaborate with fellow college students on shared projects.
+    Assign tasks within a team.
+    View team members' progress and contributions.
 
-SERVICES:
+3. Dashboard:
+    Centralized hub for general notifications and upcoming deadlines.
+    Quick access to personal and team-related activities.
+    Visual representation of task progress.
 
-- todo list/task management (Single user)
-- Project management (Collaboration with multiple users/ teams)
+4. Email Reminders:
+    Automated email notifications as deadlines approach.
+    Customizable reminder settings for each task.
 
-PAGES:
+AUTHORS:
 
-- Login/sign up page
-- Home page (index) Dashboard
-- Profile
-- Personal tasks page
-- Collaborations page
-- About, Help(FAQ) and Contact page
+This web application was developed by the following contributors:
+
+David Okonkwo:
+GitHub: https://github.com/dkokonkwo
+Email: d.okonkwo@alustudent.com
+
+Caroline Gyireh:
+GitHub: https://github.com/cgyireh1
+Email: c.gyireh@alustudent.com
+
+Tobi Josué Biaou:
+GitHub: https://github.com/Josuejosue1999
+Email: j.biaou@alustudent.com
+
+Christabel Madubuike: 
+Email: o.madubuike@alustudent.com
+
+FEEDBACK AND CONTRIBUTIONS
+We welcome feedback, bug reports, and contributions. If you encounter any issues or have suggestions for improvement, please create an issue in the GitHub repository.
+
+Feel free to fork the repository and submit pull requests with enhancements or bug fixes.

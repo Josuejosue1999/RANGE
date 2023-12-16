@@ -13,14 +13,10 @@ from datetime import datetime
 @app.route("/dashboard")
 @login_required
 def dashboard():
-    tasks = Task.query.all()
-    my_tasks = []
-    for task in tasks:
-        if task.id == current_user.id:
-            my_tasks.append(task)
+    my_tasks = Task.query.filter_by(user_id=current_user.id).all()
     image_file = url_for('static', filename='images/' +
                          current_user.image_file)
-    return render_template('dashboard.html', image_file=image_file, my_tasks=my_tasks)
+    return render_template('dashboard.html', image_file=image_file, my_tasks=my_tasks, active_page='dashboard')
 
 
 @app.route("/tasks", methods=['GET', 'POST'])
@@ -39,7 +35,7 @@ def tasks():
         flash('You task has been created!', 'success')
         return redirect(url_for('tasks'))
 
-    return render_template('tasks.html', my_tasks=my_tasks, form=form,  image_file=image_file)
+    return render_template('tasks.html', my_tasks=my_tasks, form=form, image_file=image_file, active_page='tasks')
 
 
 @app.route("/tasks/<int:task_id>/update", methods=['GET', 'POST'])
@@ -112,7 +108,7 @@ def profile():
         form.email.data = current_user.email
     image_file = url_for('static', filename='images/' +
                          current_user.image_file)
-    return render_template('profile.html', image_file=image_file, form=form)
+    return render_template('profile.html', image_file=image_file, form=form, active_page='profile')
 
 
 @app.route("/register", methods=['GET', 'POST'])
@@ -152,3 +148,11 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('login'))
+
+
+@app.route("/support", methods=['GET', 'POST'])
+@login_required
+def support():
+    image_file = url_for('static', filename='images/' +
+                         current_user.image_file)
+    return render_template('support.html', active_page='support', image_file=image_file)

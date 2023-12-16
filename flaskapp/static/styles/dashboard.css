@@ -369,3 +369,7 @@ main {
   align-items: center;
   justify-content: space-between;
 }
+
+.dash-body button:hover {
+  box-shadow: 0 0 5px #b9a1f5c4;
+}

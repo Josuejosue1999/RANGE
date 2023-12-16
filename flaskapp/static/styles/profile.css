@@ -370,3 +370,11 @@ fieldset {
   background: #805fd6;
 }
 
+/* NAV LINK AESTHETICS */
+.navbar .active {
+  color: #805fd6;
+}
+
+.navbar a:hover {
+  color: #b29af0ee;
+}

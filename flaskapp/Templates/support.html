@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block title %}
+<title>Support</title>
+{% endblock title %}
+{% block mainheader %}
+<!-- DASHBOARD SECTION -->
+<section class="support">
+  <!-- dashboard header -->
+  <div class="dash-header">
+    <div class="title-search">
+      <div class="dash-title">
+        <h2>Help & Support</h2>
+        <p>Any questions? Please Ask</p>
+      </div>
+      <div class="search-bar">
+        <h3>search</h3>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+
+    <div class="profile-pic">
+      <i class="fa-solid fa-comments"></i>
+      <i class="fa-solid fa-bell"></i>
+      <img src="{{ image_file }}" alt="profile picture" />
+      <h4>Hello {{ current_user.username }}</h4>
+    </div>
+  </div>
+
+  <!-- supp body -->
+  <div class="supp-body">
+    <div class="container">
+        <h1>Help and Support</h1>
+        <p>If you need assistance, please feel free to contact us by email at <a href="mailto:dokonkwo19@gmail.com">range@help.org</a>.</p>
+        <button id="expandButton" onclick="expandButton()">Email Us</button>
+        <div id="contactForm" class="hidden">
+            <form action="mailto:dokonkwo19@gmail.com" method="post" enctype="text/plain">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="7" cols="50"></textarea>
+                <br>
+                <input type="submit" value="Send">
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='support.js') }}"></script>
+  </div>
+</section>
+{% endblock mainheader %}

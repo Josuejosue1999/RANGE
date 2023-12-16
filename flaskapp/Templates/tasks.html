@@ -196,5 +196,27 @@
   }
 </script>
 
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div id="flash-messages">
+                {% for message in messages %}
+                    <div class="flash-message success">{{ message }}</div>
+                {% endfor %}
+            </div>
+            <script>
+                // JavaScript to fade out the flash messages after 3 seconds
+                document.addEventListener("DOMContentLoaded", function() {
+                    var flashMessages = document.querySelectorAll('.flash-message');
+                    flashMessages.forEach(function(message) {
+                        setTimeout(function() {
+                            message.classList.add('fade-out');
+                        }, 3000);
+                    });
+                });
+            </script>
+        {% endif %}
+    {% endwith %}
+
 </section>
 {% endblock mainheader %}
