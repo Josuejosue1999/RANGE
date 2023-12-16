@@ -1,4 +1,5 @@
-Task and Project Management Web Application
+TASK AND PROJECT MANAGEMENT WEB APPLICATION
+
 Overview
 This Flask-based web application provides a comprehensive task and project management solution designed for both individual users and collaborative teams, specifically tailored for college students. The application features a user-friendly interface with distinct pages for managing personal tasks, collaborating within teams, and monitoring important deadlines through a centralized dashboard. Additionally, the system sends timely email reminders to users as their deadlines approach.
 
@@ -22,8 +23,10 @@ Features
     Automated email notifications as deadlines approach.
     Customizable reminder settings for each task.
 
-AUTHORS:
+DEMO VIDEO:
+Video link: https://www.loom.com/share/8dedc0572de24cb98fe0376f92cd1d8b?sid=901d1795-e7c5-46d4-8206-4c8dccff9c64
 
+AUTHORS:
 This web application was developed by the following contributors:
 
 David Okonkwo:
